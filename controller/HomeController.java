@@ -1,2 +1,14 @@
-package se.lexicon.MartinKlasson.GolfProject.controller;public class HomeController {
+package se.lexicon.MartinKlasson.GolfProject.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class HomeController {
+
+    @GetMapping({"", "/index", "/home"})
+    public String getIndexPage(){
+        return "index";
+    }
+
 }
